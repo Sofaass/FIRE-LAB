@@ -1,0 +1,20 @@
+
+# Локальное окружение Python
+.venv/
+venv/
+
+# Временные файлы Python
+__pycache__/
+*.pyc
+
+# Настройки редактора
+.vscode/
+
+# Локальные настройки и секреты
+.streamlit/secrets.toml
+.env
+.env.*
+
+# Резервные копии
+app_backup_*.py
+app_backup.py

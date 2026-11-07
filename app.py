@@ -326,6 +326,70 @@ div[data-baseweb="select"] > div {
 .stApp .st-key-formula_card .katex * {
     color: #4D467A !important;
 }
+
+/* =====================================
+   FIRE LAB — МОБИЛЬНАЯ АДАПТАЦИЯ
+   ===================================== */
+
+@media (max-width: 768px) {
+    /* Компактное расстояние после навигации */
+    .stApp .st-key-fire_navigation {
+        margin-bottom: 0 !important;
+    }
+    /* Уменьшаем боковые отступы страницы */
+    .stApp [data-testid="stMainBlockContainer"] {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+
+    /* Компактные заголовки */
+    .stApp h1 {
+        font-size: 2rem !important;
+        line-height: 1.2 !important;
+    }
+
+    .stApp h2 {
+        font-size: 1.5rem !important;
+        line-height: 1.3 !important;
+    }
+
+    .stApp h3 {
+        font-size: 1.2rem !important;
+    }
+
+    /* Компактные карточки показателей */
+    .stApp [data-testid="stMetric"] {
+        padding: 14px !important;
+        border-radius: 12px !important;
+    }
+
+    /* Значения показателей */
+    .stApp [data-testid="stMetricValue"] {
+        font-size: 1.5rem !important;
+        overflow-wrap: anywhere;
+    }
+
+    /* Карточка с формулой */
+    .stApp .st-key-formula_card {
+        padding: 14px !important;
+    }
+
+    /* Уменьшаем кнопки навигации */
+    .stApp button[data-variant="segmented_control"] {
+        min-height: 40px !important;
+        padding: 6px 10px !important;
+    }
+
+    .stApp button[data-variant="segmented_control"] p {
+        font-size: 0.85rem !important;
+    }
+
+    /* Графики не должны выходить за экран */
+    .stApp [data-testid="stPlotlyChart"] {
+        max-width: 100% !important;
+    }
+}
+
 </style>
 """, unsafe_allow_html=True)
 
@@ -389,7 +453,7 @@ with st.container(key="fire_navigation"):
     width="stretch"
 )
 
-st.divider()
+# st.divider()
 
 # ======================================
 # FIRE LAB — ОБНОВЛЁННЫЙ ДИЗАЙН
